@@ -26,7 +26,7 @@ public class FlightGenerator {
                 typeList.get(rnd.nextInt(typeList.size())),
                 rnd.nextInt(40000), // altitude
                 rnd.nextInt(360),   // heading
-                rnd.nextInt(500),   // airspeed
+                rnd.ints(1, 100, 500).iterator().next().intValue(), // airspeed
                 rnd.doubles(1, 35d, 42d).iterator().next().floatValue(), // latitude
                 rnd.doubles(1, -115d, -83d).iterator().next().floatValue());   // longitude
     }
